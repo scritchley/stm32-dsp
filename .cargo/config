@@ -1,0 +1,11 @@
+[target.thumbv7em-none-eabihf]
+runner = 'probe-run --chip stm32f407VGTx'
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
+
+[build]
+target = "thumbv7em-none-eabihf"
+
+[unstable]
+features = ["host_dep"]
